@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #ffe6e6; /* Soft pink background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.card {
+  width: 350px;
+  background: linear-gradient(135deg, #ffcccc, #fff0f0); /* Gradient effect */
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  position: relative;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: -50px;
+  left: -50px;
+  width: 200px;
+  height: 200px;
+  background: #ff69b4; /* Hot pink heart shape */
+  border-radius: 50%;
+  transform: rotate(45deg);
+  z-index: -1;
+}
+
+.card-header {
+  text-align: center;
+  padding: 20px;
+  background: #ffcccb; /* Light pink header */
+}
+
+.card-header h1 {
+  font-size: 2rem;
+  color: #c71585; /* Deep pink text */
+  margin: 0;
+}
+
+.card-body {
+  padding: 20px;
+  text-align: center;
+}
+
+.card-body p {
+  font-size: 1rem;
+  color: #8b0000; /* Dark red text */
+  line-height: 1.5;
+}
+
+.card-footer {
+  background: #ffe4e1; /* Pale pink footer */
+  padding: 10px;
+  text-align: center;
+  border-top: 2px solid #ffc0cb; /* Pink border */
+}
+
+.card-footer button {
+  background: #ff69b4; /* Hot pink button */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.card-footer button:hover {
+  background: #db7093; /* Medium pink on hover */
+}
+
+@keyframes heartbeat {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
